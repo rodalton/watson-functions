@@ -2,9 +2,9 @@
 A set of IBM Cloud Functions that can be used to call Watson services. The instructions below outline the steps to invoke these Cloud Functions from Watson Assistant. 
 
 ## IBM Cloud Functions 
-From IBM Cloud Functions, create a new Action proving a name and optionally a package name. 
-Insert code 
-Create the parameters identified in the code 
+1. From IBM Cloud Functions, create a new Action proving a name and optionally a package name. 
+2. Insert code 
+3. Create the parameters identified in the code 
 
 ## Watson Assistant 
 From the Watson Assistant workspace, update the appropiate Dialog node using the JSON editor 
