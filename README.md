@@ -31,7 +31,7 @@ Sample JSON to include below
 
 `name` points to the IBM Cloud Functions action created earlier. 
 
-`$my_creds` is a variable that includes the IBM Cloud Functions username & password. The `$my_creds` should have the following format. 
+`$my_creds` is a variable that includes the IBM Cloud Functions username & password. The `$my_creds` variable should have the following format. 
 ```
 {
   "user":"97b54365-5b01-4161-843c-95a67ae70819",
