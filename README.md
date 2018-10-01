@@ -3,7 +3,7 @@ A set of IBM Cloud Functions that can be used to call Watson services. The instr
 
 ## IBM Cloud Functions 
 1. From IBM Cloud Functions, create a new Action proving a name and optionally a package name. 
-2. Insert code 
+2. Insert code for the appropriate service from the source above 
 3. Create the parameters identified in the code 
 
 ## Watson Assistant 
