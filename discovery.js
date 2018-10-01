@@ -17,7 +17,7 @@ function main(params) {
         'environment_id': params.environment_id,
         'collection_id': params.collection_id,
         'configuration_id': params.configuration_id,
-        'query': params.input,
+        'natural_language_query': params.input,
         'passages': true,
         'count': 2,
         'return': 'text'
