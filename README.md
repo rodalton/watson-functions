@@ -20,7 +20,7 @@ Sample JSON to include below
       "name": "/daltonro@ie.ibm.com_dev/actions/discovery",
       "type": "server",
       "parameters": {
-        "input": "$input"
+        "input": "<?input.text?>"
       },
       "credentials": "$my_creds",
       "result_variable": "context.watson_output"
