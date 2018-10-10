@@ -1,7 +1,15 @@
 # watson-functions
-A set of IBM Cloud Functions that can be used to call Watson services. The instructions below outline the steps to invoke these Cloud Functions from Watson Assistant. 
+A set of IBM Cloud Functions that can be used to call Watson AI services on IBM Cloud.
+
+[IBM Cloud Functions](https://console.bluemix.net/docs/openwhisk/index.html#index) (based on Apache OpenWhisk) is a Function-as-a-Service (FaaS) platform which executes functions in response to incoming events.  
+
+The Watson AI services referenced above are made available on IBM Cloud and can be found on the [IBM Cloud Catalog](https://console.bluemix.net/catalog/?category=ai). 
+
+Watson Assistant documentation outlines how to [make programmatic calls from a dialog node] (https://console.bluemix.net/docs/services/conversation/dialog-actions.html#dialog-actions). The instructions that follow however, outline the step by step approach to invoke the Cloud Functions made available in this repository from Watson Assistant. 
+
 
 ## IBM Cloud Functions 
+As mentioned above, IBM Cloud Functions provides a serverless/Function-as-a-Service platform. 
 1. From IBM Cloud Functions, create a new Action providing a name and optionally a package name. 
 2. Insert code for the appropriate service from the source above 
 3. Create the parameters identified in the code 
