@@ -30,11 +30,16 @@ With Watson Discovery, if you plan to work with a private Collection, you'll fir
 ## Watson Assistant 
 While the Cloud Functions included in this repository can be invoked like any other Cloud Function outside the context of Watson Assistant, these instructions are targeted at calling a Cloud Function from a Watson Assistant dialog node. We also assume here that you've created a Watson Assistant instance running in the US South Region and that you've created a Watson Assistant Workspace already. 
 
-To call a Cloud Function from Watson Assistant, we'll need to update a Dialog node in the Workspace with details of the Cloud Function to call. We assume at this point, that you've identified the node that'll invoke a Cloud Function have met a defined condition in the node. For example, you might have a Dialog node 
+To call a Cloud Function from Watson Assistant, we'll need to update a dialog node in the Workspace with details of the Cloud Function to call. We assume at this point, that you've identified the node that'll invoke a Cloud Function having met a defined condition in the node. For example, you might have a dialog node dedicated to making calls to Watson Discovery. The node might have a condition that aligns with an #ask-discovery intent. Follow the steps belows to update your Watson Assitant Workspace. 
 
-We'll update the Dialog node to be called from Watson AssiFrom the Watson Assistant workspace, update the appropiate Dialog node using the JSON editor 
+1. Open Watson Assistant using the Launch Tool 
+2. Open the appropriate Watson Assistant Workspace
+3. Open the Intents tab and create a new `#ask-discovery` intent with appropriate examples
+4. Open the Dialog tab and add a node that'll be used to invoke a Cloud Function that calls Watson Discovery 
+5. In your new node, enter `#ask-discovery` in the If bot recognizes field, then open the JSON Editor for that node. 
 
-Sample JSON to include below 
+We'll provide details of the Cloud Function to call from Watson Assitant in the JSON Editor for the open node. The sample JSON below can be copied into your JSON Editor.  
+
 ```javascript
 {
   "output": {
