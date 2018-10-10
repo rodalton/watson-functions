@@ -30,6 +30,7 @@ With Watson Discovery, if you plan to work with a private Collection, you'll fir
 ## Watson Assistant 
 While the Cloud Functions included in this repository can be invoked like any other Cloud Function outside the context of Watson Assistant, these instructions are targeted at calling a Cloud Function from a Watson Assistant dialog node. We also assume here that you've created a Watson Assistant instance running in the US South Region and that you've created a Watson Assistant Workspace already. 
 
+#Create a dialog node to call a Cloud Function 
 To call a Cloud Function from Watson Assistant, we'll need to update a dialog node in the Workspace with details of the Cloud Function to call. We assume at this point, that you've identified the node that'll invoke a Cloud Function having met a defined condition in the node. For example, you might have a dialog node dedicated to making calls to Watson Discovery. The node might have a condition that aligns with an #ask-discovery intent. Follow the steps belows to update your Watson Assitant Workspace. 
 
 1. Open Watson Assistant using the Launch Tool 
@@ -45,7 +46,11 @@ Update the name value to point to the Action created earlier
 2. Open the Action created earlier and from the left hand navigation select Endpoints
 3. In the Rest API table you'll see a POST URL value. Copy the value after namespaces but before post and replace the %40 encoding with an @ symbol. 
 
-To provide an example for step 3 above, my POST URL for an action looks like this: `https://openwhisk.ng.bluemix.net/api/v1/namespaces/daltonro%40ie.ibm.com_dev/actions/watson/discovery` so the value I'll paste into my JSON is `/daltonro@ie.ibm.com_dev/actions/watson/discovery`
+To provide an example for step 3 above, my POST URL for an Action looks like this:
+`https://openwhisk.ng.bluemix.net/api/v1/namespaces/daltonro%40ie.ibm.com_dev/actions/watson/discovery` 
+
+The value I'll paste into my JSON is as follows: 
+`/daltonro@ie.ibm.com_dev/actions/watson/discovery`
 
 ```javascript
 {
