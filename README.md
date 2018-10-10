@@ -30,7 +30,7 @@ With Watson Discovery, if you plan to work with a private Collection, you'll fir
 ## Watson Assistant 
 While the Cloud Functions included in this repository can be invoked like any other Cloud Function outside the context of Watson Assistant, these instructions are targeted at calling a Cloud Function from a Watson Assistant dialog node. We also assume here that you've created a Watson Assistant instance running in the US South Region and that you've created a Watson Assistant Workspace already. 
 
-#Create a dialog node to call a Cloud Function 
+### Create a dialog node to call a Cloud Function 
 To call a Cloud Function from Watson Assistant, we'll need to update a dialog node in the Workspace with details of the Cloud Function to call. We assume at this point, that you've identified the node that'll invoke a Cloud Function having met a defined condition in the node. For example, you might have a dialog node dedicated to making calls to Watson Discovery. The node might have a condition that aligns with an #ask-discovery intent. Follow the steps belows to update your Watson Assitant Workspace. 
 
 1. Open Watson Assistant using the Launch Tool 
@@ -39,6 +39,7 @@ To call a Cloud Function from Watson Assistant, we'll need to update a dialog no
 4. Open the Dialog tab and add a node that'll be used to invoke a Cloud Function that calls Watson Discovery 
 5. In your new node, enter `#ask-discovery` in the If bot recognizes field, then open the JSON Editor for that node. 
 
+### Update the JSON in the JSON Editor 
 We provide details of the Cloud Function to call from Watson Assitant in the JSON Editor for the open node. The sample JSON below can be copied into the JSON Editor with some minor updates. 
 
 Update the name value to point to the Action created earlier
@@ -71,16 +72,26 @@ The value I'll paste into my JSON is as follows:
 }
 ```
 
+### IBM Cloud Functions Credentials 
+The credentials value of `$my_creds` above refers to a Watson Assistant context variable that used to provide credentials to access IBM Cloud Functions. The `$my_creds` variable should have the following format: 
 
-`name` points to the IBM Cloud Functions action created earlier. 
-
-`$my_creds` is a variable that includes the IBM Cloud Functions username & password. The `$my_creds` variable should have the following format. 
 ```
 {
-  "user":"97b54365-5b01-4161-843c-95a67ae70819",
-  "password":"XOl6xqSr7Z5lNADuBiIFxEK0y93VFL6yVDXKG56a8r5cfpzyUT4r1pzuTXRIBowk"
+  "user":"<username>",
+  "password":"<password>"
 }
 ```
+The IBM Cloud Functions username and password to include in the `$my_creds` variable can again be accessed from the Endpoints page of the IBM Cloud Functions Action. 
 
+To access the username and password: 
+1. Open IBM Cloud Functions and open the Action created earlier 
+2. In the REST API table click on the API-KEY link
+3. Copy the key value and paste into a text editor
+4. Notice the : in the key value. The username is made up of the characters before the : and the password is everything after 
+
+The `$my_creds` context variable can be passed to Watson Assistant from a calling application or if testing the dialog from the Watson Assistant Workspace, can be created via the Manage Context interface in the Try it out pane. 
+
+### Return results of the Cloud Function call 
+To results returned from the Cloud Functions call are stored in the `result_variable` property as seen in the JSON above. These reults can be accessed in a child node of the dialog node created earlier. 
 
 
