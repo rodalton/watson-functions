@@ -38,7 +38,14 @@ To call a Cloud Function from Watson Assistant, we'll need to update a dialog no
 4. Open the Dialog tab and add a node that'll be used to invoke a Cloud Function that calls Watson Discovery 
 5. In your new node, enter `#ask-discovery` in the If bot recognizes field, then open the JSON Editor for that node. 
 
-We'll provide details of the Cloud Function to call from Watson Assitant in the JSON Editor for the open node. The sample JSON below can be copied into your JSON Editor.  
+We provide details of the Cloud Function to call from Watson Assitant in the JSON Editor for the open node. The sample JSON below can be copied into the JSON Editor with some minor updates. 
+
+Update the name value to point to the Action created earlier
+1. Open IBM Cloud Functions in a separate tab/window
+2. Open the Action created earlier and from the left hand navigation select Endpoints
+3. In the Rest API table you'll see a POST URL value. Copy the value after namespaces but before post and replace the %40 encoding with an @ symbol. 
+
+To provide an example for step 3 above, my POST URL for an action looks like this: `https://openwhisk.ng.bluemix.net/api/v1/namespaces/daltonro%40ie.ibm.com_dev/actions/watson/discovery` so the value I'll paste into my JSON is `/daltonro@ie.ibm.com_dev/actions/watson/discovery`
 
 ```javascript
 {
@@ -47,17 +54,18 @@ We'll provide details of the Cloud Function to call from Watson Assitant in the 
   },
   "actions": [
     {
-      "name": "/daltonro@ie.ibm.com_dev/actions/discovery",
+      "name": "/jdoe@example.com_dev/actions/discovery",
       "type": "server",
       "parameters": {
         "input": "<?input.text?>"
       },
       "credentials": "$my_creds",
-      "result_variable": "context.watson_output"
+      "result_variable": "context.discovery_output"
     }
   ]
 }
 ```
+
 
 `name` points to the IBM Cloud Functions action created earlier. 
 
