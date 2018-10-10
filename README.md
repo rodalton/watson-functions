@@ -18,11 +18,11 @@ As mentioned above, IBM Cloud Functions provides a serverless/Function-as-a-Serv
 5. Save your newly created Action
 
 Next we'll need to add Parameters that'll be passed to our Action when invoked. 
-1. Select Pramaters from the left navigation bar 
+1. Select Paramaters from the left navigation bar 
 2. Create a new Parameter for each of the parameters outlined in the Action's source code
 
 ## Create Watson AI services and update Parameter values 
-For any of the Watson AI services you plan to call from a Cloud Function, you'll first need to create an instance of the service on IBM Cloud. You'll create a service instance as usual from the IBM Cloud Catalog or via the IBM Cloud CLI. After creating an instance of the service, you'll need to capture relevant details about the service instance that'll allow you make a call to the service via API. For example, if you plan to use the Tone Analyzer service, after you create a service instance, you'll need to gather relenvant details from the Service Credentials page for the service on IBM Cloud. Once you've captured these details, you can provide as values to the Cloud Functions parameters created above. 
+For any of the Watson AI services you plan to call from a Cloud Function, you'll first need to create an instance of the service on IBM Cloud. You'll create a service instance as usual from the IBM Cloud Catalog or via the IBM Cloud CLI. After creating an instance of the service, you'll need to capture relevant details about the service instance that'll allow you make a call to the service via API. For example, if you plan to use the Tone Analyzer service, after you create a service instance, you'll gather relevant details from the Service Credentials page for the service on IBM Cloud e.g. `iam_apikey` and `url`. Once you've captured these details, you can provide as Parameter values to the Action created above. 
 
 With Watson Discovery, if you plan to work with a private Collection, you'll first need to create the Collection then ingest and enrich your documents. You'll also need to provide details about the Collection as well as the Serice Credentials in order to invoke the `discovery` function made available in this repository. 
 
