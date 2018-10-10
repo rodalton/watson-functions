@@ -28,7 +28,11 @@ With Watson Discovery, if you plan to work with a private Collection, you'll fir
 
 
 ## Watson Assistant 
-From the Watson Assistant workspace, update the appropiate Dialog node using the JSON editor 
+While the Cloud Functions included in this repository can be invoked like any other Cloud Function outside the context of Watson Assistant, these instructions are targeted at calling a Cloud Function from a Watson Assistant dialog node. We also assume here that you've created a Watson Assistant instance running in the US South Region and that you've created a Watson Assistant Workspace already. 
+
+To call a Cloud Function from Watson Assistant, we'll need to update a Dialog node in the Workspace with details of the Cloud Function to call. We assume at this point, that you've identified the node that'll invoke a Cloud Function have met a defined condition in the node. For example, you might have a Dialog node 
+
+We'll update the Dialog node to be called from Watson AssiFrom the Watson Assistant workspace, update the appropiate Dialog node using the JSON editor 
 
 Sample JSON to include below 
 ```javascript
