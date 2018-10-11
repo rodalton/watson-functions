@@ -12,8 +12,8 @@ Watson Assistant documentation outlines how to [make programmatic calls from a d
 As mentioned above, IBM Cloud Functions provides a serverless/Function-as-a-Service platform. You can call the functions provided in this repository from a dialog node in Watson Assistant - to do so, we'll first need to create Actions using IBM Cloud Functions. 
 
 1. Login to IBM Cloud and select Functions from the IBM Cloud Catalog
-2. Ensure your IBM Cloud Region is set to US South
-3. From IBM Cloud Functions select Action, then use the Create button to create a new action providing a name and optionally a package name
+2. Next select Actions from the left navigation menu
+3. Ensure your IBM Cloud Region is set to US South, then use the Create button to create a new action providing a name and optionally a package name
 4. Insert code for the appropriate service using the source from this repository 
 5. Save your newly created Action
 
