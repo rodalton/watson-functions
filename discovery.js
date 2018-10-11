@@ -21,35 +21,34 @@ function main(params) {
 
       let discovery;
 
-      if (iam_apikey){
+      if (params.iam_apikey){
         discovery = new DiscoveryV1({
-          iam_apikey: params.iam_apikey,
-          url: params.url
-          version: '2018-08-01'
+          'iam_apikey': params.iam_apikey,
+          'url': params.url,
+          'version': '2018-08-01'
         });
       }
       else {
         discovery = new DiscoveryV1({
-        username: params.username,
-        password: params.password,
-        url: params.url,
-        version: '2018-08-01'
-      }
-    });
-
-      discovery.query({
-        'environment_id': params.environment_id,
-        'collection_id': params.collection_id,
-        'configuration_id': params.configuration_id,
-        'natural_language_query': params.input,
-        'passages': true,
-        'count': 2,
-        'return': 'text'
-      }, function(err, data) {
-        if (err) {
-          return reject(err);
-        }
-        return resolve(data);
+          'username': params.username,
+          'password': params.password,
+          'url': params.url,
+          'version': '2018-08-01'
       });
+    }
+
+    discovery.query({
+      'environment_id': params.environment_id,
+      'collection_id': params.collection_id,
+      'configuration_id': params.configuration_id,
+      'natural_language_query': params.input,
+      'passages': false,
+      'return': 'text'
+    }, function(err, data) {
+      if (err) {
+        return reject(err);
+      }
+      return resolve(data);
     });
-  }
+  });
+}
