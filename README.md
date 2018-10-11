@@ -13,9 +13,11 @@ As mentioned above, IBM Cloud Functions provides a serverless/Function-as-a-Serv
 
 1. Login to IBM Cloud and select Functions from the IBM Cloud Catalog
 2. Next select Actions from the left navigation menu
-3. Ensure your IBM Cloud Region is set to US South, then use the Create button to create a new action providing a name and optionally a package name
-4. Insert code for the appropriate service using the source from this repository 
-5. Save your newly created Action
+3. Ensure your IBM Cloud Region is set to US South
+4. Use the Create button, then click on Create Action
+5. Enter an Action Name and optionally create a package. Select Node.js 8 as the Runtime then click on Create
+6. Insert code for the appropriate service using the source from this repository 
+7. Save your newly created Action
 
 Next we'll need to add Parameters that'll be passed to our Action when invoked. 
 1. Select Paramaters from the left navigation bar 
