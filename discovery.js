@@ -7,6 +7,11 @@
   * @param {string} params.password
   * @param {string} params.environment_id
   * @param {string} params.collection_id
+<<<<<<< HEAD
+  * @param {string} params.configuration_id
+=======
+  * @param {string} params.configuration_id  
+>>>>>>> 8c7a67cff480c4446dd86cbb885a485b53506593
   * @param {string} params.input
   *
   * @return {object}

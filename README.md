@@ -35,7 +35,7 @@ With Watson Discovery, if you plan to work with a private Collection, you'll fir
 While the Cloud Functions included in this repository can be invoked like any other Cloud Function outside the context of Watson Assistant, these instructions are targeted at calling a Cloud Function from a Watson Assistant dialog node. We assume here that you've created a Watson Assistant instance running in the US South Region and that you've created a Watson Assistant Workspace already. 
 
 ### 3.1 Create a dialog node to call a Cloud Function 
-To call a Cloud Function from Watson Assistant, we'll need to update a dialog node in the Workspace with details of the Cloud Function to call. We assume at this point, that you've identified the node that'll invoke a Cloud Function having met a defined condition in the node. For example, you might have a dialog node dedicated to making calls to Watson Discovery. The node might have a condition that aligns with an #ask-discovery intent. 
+To call a Cloud Function from Watson Assistant, we'll need to update a dialog node in the Workspace with details of the Cloud Function to call. We assume at this point, that you've identified the node that'll invoke a Cloud Function having met a defined condition in the node. For example, you might have a dialog node dedicated to making calls to Watson Discovery. The node might have a condition that aligns with an `#ask-discovery` intent. 
 
 Follow the steps belows to update your Watson Assistant Workspace
 1. Open Watson Assistant using the Launch Tool 
@@ -47,10 +47,10 @@ Follow the steps belows to update your Watson Assistant Workspace
 ### 3.2 Update the JSON in the JSON Editor 
 We provide details of the Cloud Function to call from Watson Assitant in the JSON Editor for the open node. The sample JSON below can be copied into the JSON Editor with some minor updates. 
 
-Update the _name_ value to point to the Action created earlier
+First, we'll update the _name_ value to point to the Action created earlier. To get the Action details to include in our JSON
 1. Open IBM Cloud Functions in a separate tab/window
-2. Open the Action created earlier and from the left hand navigation select Endpoints
-3. In the Rest API table you'll see a _POST URL_ value. Copy the value after namespaces but before post in the URL and replace the `%40` encoding with an `@` symbol. 
+2. Open the Action created earlier and from the left hand navigation select _Endpoints_
+3. In the Rest API table you'll see a _POST URL_ value. Copy the value after namespaces but before post in the URL. If there's an encoded value in the URL, replace with the appropriate ASCII character e.g. replace `%40` in the URL below with an `@` symbol
 
 To provide an example for step 3 above, my _POST URL_ for an Action looks like this
 `https://openwhisk.ng.bluemix.net/api/v1/namespaces/daltonro%40ie.ibm.com_dev/actions/watson/discovery` 
