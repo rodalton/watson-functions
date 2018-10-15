@@ -30,6 +30,11 @@ For any of the Watson AI services you plan to call from a Cloud Function, you'll
 
 With Watson Discovery, if you plan to work with a private Collection, you'll first need to create the Collection then ingest and enrich your documents. You'll also need to provide details about the Collection as well as the Service Credentials in order to invoke the `discovery` function made available in this repository. 
 
+See the image the follows for an example of the paramaters used with the discovery Action 
+
+![alt text](https://github.com/rodalton/watson-functions/blob/master/images/parameters.png "Discovery Parameters")
+
+
 
 ## 3. Watson Assistant 
 While the Cloud Functions included in this repository can be invoked like any other Cloud Function outside the context of Watson Assistant, these instructions are targeted at calling a Cloud Function from a Watson Assistant dialog node. We assume here that you've created a Watson Assistant instance running in the US South Region and that you've created a Watson Assistant Workspace already. 
