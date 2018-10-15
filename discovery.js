@@ -7,7 +7,6 @@
   * @param {string} params.password
   * @param {string} params.environment_id
   * @param {string} params.collection_id
-  * @param {string} params.configuration_id  
   * @param {string} params.input
   *
   * @return {object}
