@@ -45,9 +45,9 @@ To call a Cloud Function from Watson Assistant, we'll need to update a dialog no
 Follow the steps belows to update your Watson Assistant Workspace
 1. Open Watson Assistant using the Launch Tool 
 2. Open the appropriate Watson Assistant Workspace
-3. Open the Intents tab and create a new `#ask-discovery` intent with appropriate examples
+3. Open the Intents tab and create a new `#Ask_Discovery` intent with appropriate examples
 4. Open the Dialog tab and add a node that'll be used to invoke a Cloud Function that calls Watson Discovery 
-5. In your new node, enter `#ask-discovery` in the _If bot recognizes_ field, then open the JSON Editor for that node. 
+5. In your new node, enter `#Ask_Discovery` in the _If bot recognizes_ field, then open the JSON Editor for that node. 
 
 ### 3.2 Update the JSON in the JSON Editor 
 We provide details of the Cloud Function to call from Watson Assitant in the JSON Editor for the open node. The sample JSON below can be copied into the JSON Editor with some minor updates. 
