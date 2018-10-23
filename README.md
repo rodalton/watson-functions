@@ -30,6 +30,11 @@ For any of the Watson AI services you plan to call from a Cloud Function, you'll
 
 With Watson Discovery, if you plan to work with a private Collection, you'll first need to create the Collection then ingest and enrich your documents. You'll also need to provide details about the Collection as well as the Service Credentials in order to invoke the `discovery` function made available in this repository. 
 
+See the image the follows for an example of the paramaters used with the discovery Action 
+
+![alt text](https://github.com/rodalton/watson-functions/blob/master/images/parameters.png "Discovery Parameters")
+
+
 
 ## 3. Watson Assistant 
 While the Cloud Functions included in this repository can be invoked like any other Cloud Function outside the context of Watson Assistant, these instructions are targeted at calling a Cloud Function from a Watson Assistant dialog node. We assume here that you've created a Watson Assistant instance running in the US South Region and that you've created a Watson Assistant Workspace already. 
@@ -40,9 +45,9 @@ To call a Cloud Function from Watson Assistant, we'll need to update a dialog no
 Follow the steps belows to update your Watson Assistant Workspace
 1. Open Watson Assistant using the Launch Tool 
 2. Open the appropriate Watson Assistant Workspace
-3. Open the Intents tab and create a new `#ask-discovery` intent with appropriate examples
+3. Open the Intents tab and create a new `#Ask_Discovery` intent with appropriate examples
 4. Open the Dialog tab and add a node that'll be used to invoke a Cloud Function that calls Watson Discovery 
-5. In your new node, enter `#ask-discovery` in the _If bot recognizes_ field, then open the JSON Editor for that node. 
+5. In your new node, enter `#Ask_Discovery` in the _If bot recognizes_ field, then open the JSON Editor for that node. 
 
 ### 3.2 Update the JSON in the JSON Editor 
 We provide details of the Cloud Function to call from Watson Assitant in the JSON Editor for the open node. The sample JSON below can be copied into the JSON Editor with some minor updates. 
