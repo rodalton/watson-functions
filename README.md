@@ -7,6 +7,8 @@ The Watson AI services referenced above are made available on IBM Cloud and can 
 
 Watson Assistant documentation outlines how to [make programmatic calls from a dialog node](https://console.bluemix.net/docs/services/conversation/dialog-actions.html#dialog-actions). The instructions that follow however, outline the step by step approach to invoke the Cloud Functions made available in this repository from Watson Assistant. 
 
+![alt text](https://github.com/rodalton/watson-functions/blob/master/images/solution_overview.jpg "Solution Overview")
+
 
 ## 1. IBM Cloud Functions 
 As mentioned above, IBM Cloud Functions provides a serverless/Function-as-a-Service platform. You can call the functions provided in this repository from a dialog node in Watson Assistant - to do so, we'll first need to create Actions using IBM Cloud Functions. 
